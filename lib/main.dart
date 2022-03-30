@@ -10,11 +10,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData themeData = ThemeData(
+      fontFamily: 'Lato',
+    );
+
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: themeData.copyWith(
+        colorScheme: themeData.colorScheme.copyWith(
+          primary: Colors.purple,
+          secondary: Colors.deepOrange,
+        ),
+        textTheme: themeData.textTheme.copyWith(
+          titleLarge: const TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontFamily: 'Lato',
+          ),
+        ),
       ),
       home: ProductOverviewPage(),
     );
