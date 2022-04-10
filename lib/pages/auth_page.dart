@@ -58,7 +58,7 @@ class AuthPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                AuthForm(),
+                const AuthForm(),
               ],
             ),
           )
